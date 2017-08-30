@@ -1,9 +1,10 @@
 package test.sp.iot2.anno1;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import javax.inject.Named;
 
-@Service("au")
+import org.springframework.beans.factory.annotation.Autowired;
+
+@Named("au")
 public class Audi implements Maker{
 	@Autowired
 	private Car car;
