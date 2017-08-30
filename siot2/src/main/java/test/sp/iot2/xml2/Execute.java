@@ -5,14 +5,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Execute {	
 	Worker w;
-	public Execute(){}
 	public Execute(Worker w){
 		this.w = w;
 	}
-	
+
 	public void setWorker(Worker w){
 		this.w = w;
 	}
+	
 	public static void main(String[] args){
 		ApplicationContext factory;
 		String path = "classpath:/xml2/ioc.xml";

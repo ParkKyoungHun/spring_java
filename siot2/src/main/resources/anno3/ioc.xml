@@ -7,20 +7,21 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
-	<context:component-scan base-package="test.sp.iot2.anno2" />
-	<util:map id="map" map-class="java.util.HashMap">
-		<entry key="key1">
-			<value>value1</value>
-		</entry>
-		<entry key="key2">
-			<ref bean="str1"/>
-		</entry>
-	</util:map>
+	<context:component-scan base-package="test.sp.iot2.anno3" />
 	
-	
-	<bean id="str1" class="java.lang.String">
+	<bean id="id" class="java.lang.String">
 		<constructor-arg>
-			<value>ref-value2</value>
+			<value>test</value>
+		</constructor-arg>
+	</bean>
+	<bean id="pwd" class="java.lang.String">
+		<constructor-arg>
+			<value>test</value>
+		</constructor-arg>
+	</bean>
+	<bean id="name" class="java.lang.String">
+		<constructor-arg>
+			<value>홍길동</value>
 		</constructor-arg>
 	</bean>
 </beans>

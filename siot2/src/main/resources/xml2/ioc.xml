@@ -4,9 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
 	<bean id="ex" class="test.sp.iot2.xml2.Execute">
-		<constructor-arg ref="de2"/>
+		<constructor-arg ref="de"></constructor-arg>
 		<property name="worker">
-			<ref bean="de"/>
+			<ref bean="de2"/>
 		</property>
 	</bean>
 	<bean id="de" class="test.sp.iot2.xml2.Developer"/>
