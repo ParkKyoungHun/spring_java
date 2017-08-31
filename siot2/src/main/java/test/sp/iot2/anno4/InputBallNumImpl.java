@@ -12,8 +12,7 @@ public class InputBallNumImpl implements InputBallNum{
 
 	private Scanner scan;
 	
-	@Autowired
-	public void setScanner(@Qualifier("scan")Scanner scan){
+	public void setScanner(Scanner scan){
 		this.scan = scan;
 	}
 	

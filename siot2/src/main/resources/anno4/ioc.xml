@@ -8,6 +8,22 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
 	<context:component-scan base-package="test.sp.iot2.anno4" />
+	<bean id="gs" class="test.sp.iot2.anno4.GameStage">
+		<property name="ibn">
+			<ref bean="ibn"/>
+		</property>
+		<property name="bg">
+			<ref bean="bg"/>
+		</property>
+	</bean>
+	<bean id="bg" class="test.sp.iot2.anno4.BallGameImpl">
+	</bean>
+	
+	<bean id="ibn" class="test.sp.iot2.anno4.InputBallNumImpl">
+		<property name="scanner">
+			<ref bean="scan"/>
+		</property>
+	</bean>
 	
 	<util:constant id = "in" static-field="java.lang.System.in" />
 	<bean id="scan" class="java.util.Scanner">
