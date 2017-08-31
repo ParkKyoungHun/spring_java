@@ -10,15 +10,12 @@ public class User {
 	private String id;
 	private String pwd;
 	private String name;
-	public User(){
-		
+	@Autowired
+	public User(@Qualifier("id")String id, @Qualifier("pwd")String pwd, @Qualifier("name")String name){
+		this.id = id;
+		this.pwd = pwd;
+		this.name = name;
 	}
-//	@Autowired
-//	public User(@Qualifier("id")String id, @Qualifier("pwd")String pwd, @Qualifier("name")String name){
-//		this.id = id;
-//		this.pwd = pwd;
-//		this.name = name;
-//	}
 	
 	public String getId() {
 		return id;
