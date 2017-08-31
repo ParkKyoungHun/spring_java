@@ -4,11 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+@Service
 public class InputBallNumImpl implements InputBallNum{
 
 	private Scanner scan;
 	
-	public void setScanner(Scanner scan){
+	@Autowired
+	public void setScanner(@Qualifier("scan")Scanner scan){
 		this.scan = scan;
 	}
 	

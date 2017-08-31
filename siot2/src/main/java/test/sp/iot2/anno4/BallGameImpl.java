@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.springframework.stereotype.Service;
+@Service
 public class BallGameImpl implements BallGame{
 
 	List<Integer> numList = new ArrayList<Integer>();
